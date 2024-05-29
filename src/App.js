@@ -1,7 +1,16 @@
-import "./App.css";
-
+import { Provider } from "react-redux";
+import Body from "./components/Body";
+import Header from "./components/Header";
+import store from "./utils/store";
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Provider store={store}>
+      <div className="App">
+        <Header></Header>
+        <Body></Body>
+      </div>
+    </Provider>
+  );
 }
 
 export default App;
